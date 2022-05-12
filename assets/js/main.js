@@ -183,16 +183,44 @@
   //Show more Prizes
   $('.showMorePrizes').click(function() {
     $('#showedRowP').hide(500);
+    $('#hiddenRowP2').hide(500);
     $('#hiddenRowP').show(250, function(){
       $('.showMorePrizes').hide();
+      $('.goBackP2').hide();
       $('.goBackP').css("display","block");
+      $('.showMorePrizes2').css("margin-right","10px");
+      $('.showMorePrizes2').css("display","block");
     });
   });
   $('.goBackP').click(function() {
     $('#hiddenRowP').hide(500);
+    $('#hiddenRowP2').hide(500);
+    $('#showedRowP2').hide(500);
     $('#showedRowP').show(250, function(){
       $('.goBackP').hide();
+      $('.showMorePrizes2').hide();
       $('.showMorePrizes').show();
+    });
+  });
+  $('.showMorePrizes2').click(function() {
+    $('#showedRowP').hide(500);
+    $('#hiddenRowP').hide(500);
+    $('#hiddenRowP2').show(250, function(){
+      $('.showMorePrizes').hide();
+      $('.showMorePrizes2').hide();
+      $('.goBackP').hide();
+      $('.goBackP2').css("display","block");
+    });
+  });
+    $('.goBackP2').click(function() {
+    $('#hiddenRowP2').hide(500);
+    $('#hiddenRowP').show(250, function(){
+      $('.showMorePrizes').hide();
+      $('.showMorePrizes2').hide();
+      $('.goBackP2').hide();
+      $('.goBackP').css("display","block");
+      $('.showMorePrizes2').css("margin-right","10px");
+      $('.showMorePrizes2').css("display","block");
     });
   });
   //Show more Certificates
@@ -230,5 +258,6 @@
   $(window).on('load', function() {
     aos_init();
   });
+  //Form submission
 
 })(jQuery);
