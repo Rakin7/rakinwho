@@ -660,6 +660,12 @@ section {
 .services .goBackP {
   display: none;
 }
+.services .showMorePrizes2 {
+  display: none;
+}
+.services .goBackP2 {
+  display: none;
+}
 .services .goBackC {
   display: none;
 }
